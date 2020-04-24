@@ -1,0 +1,10 @@
+{
+	"name": "ArgusKeyVault1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://ArgusKeyVault1.vault.azure.net/"
+		}
+	}
+}
