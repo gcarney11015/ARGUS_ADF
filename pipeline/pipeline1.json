@@ -117,16 +117,6 @@
 							},
 							{
 								"source": {
-									"name": "detail_Annual",
-									"type": "String"
-								},
-								"sink": {
-									"name": "groupFooter3_annualBudget",
-									"type": "Decimal"
-								}
-							},
-							{
-								"source": {
 									"name": "9999"
 								},
 								"sink": {
