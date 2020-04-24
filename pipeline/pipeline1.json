@@ -40,7 +40,7 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "budget",
+							"wildcardFolderPath": "budgets",
 							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
