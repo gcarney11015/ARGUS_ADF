@@ -38,7 +38,10 @@
 							},
 							{
 								"name": "FakeRowID",
-								"value": "9999"
+								"value": {
+									"value": "@variables('RowID')",
+									"type": "Expression"
+								}
 							}
 						],
 						"storeSettings": {
@@ -165,6 +168,12 @@
 				]
 			}
 		],
+		"variables": {
+			"RowID": {
+				"type": "String",
+				"defaultValue": "9999"
+			}
+		},
 		"annotations": []
 	}
 }
