@@ -35,6 +35,10 @@
 									"value": "@utcnow()",
 									"type": "Expression"
 								}
+							},
+							{
+								"name": "FakeRowID",
+								"value": "9999"
 							}
 						],
 						"storeSettings": {
