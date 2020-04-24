@@ -137,6 +137,16 @@
 									"name": "LoadDateTime",
 									"type": "DateTime"
 								}
+							},
+							{
+								"source": {
+									"name": "importFileName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BudgetHistoryRowID",
+									"type": "Int32"
+								}
 							}
 						]
 					}
