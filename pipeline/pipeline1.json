@@ -124,7 +124,8 @@
 							},
 							{
 								"source": {
-									"name": "9999"
+									"name": "FakeRowID",
+									"type": "String"
 								},
 								"sink": {
 									"name": "BudgetHistoryRowID",
@@ -139,16 +140,6 @@
 								"sink": {
 									"name": "LoadDateTime",
 									"type": "DateTime"
-								}
-							},
-							{
-								"source": {
-									"name": "importFileName",
-									"type": "String"
-								},
-								"sink": {
-									"name": "BudgetHistoryRowID",
-									"type": "Int32"
 								}
 							}
 						]
