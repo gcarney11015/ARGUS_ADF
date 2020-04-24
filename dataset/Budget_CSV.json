@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"folderPath": "budgets",
 				"container": "financials-import"
 			},
 			"columnDelimiter": ",",
