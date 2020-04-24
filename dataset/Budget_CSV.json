@@ -18,6 +18,59 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "header_BudgetNameValue",
+				"type": "String"
+			},
+			{
+				"name": "header_OrgValue",
+				"type": "String"
+			},
+			{
+				"name": "header_OrgName",
+				"type": "String"
+			},
+			{
+				"name": "header_GroupName",
+				"type": "String"
+			},
+			{
+				"name": "header_BugetYearValue",
+				"type": "String"
+			},
+			{
+				"name": "detail_Annual",
+				"type": "String"
+			},
+			{
+				"name": "Profit_Center",
+				"type": "String"
+			},
+			{
+				"name": "detail_AccountLabel",
+				"type": "String"
+			},
+			{
+				"name": "detail_AccountName",
+				"type": "String"
+			},
+			{
+				"name": "GLPeriod",
+				"type": "String"
+			},
+			{
+				"name": "Month",
+				"type": "String"
+			},
+			{
+				"name": "detail Amount",
+				"type": "String"
+			},
+			{
+				"name": "txtNotes",
+				"type": "String"
+			}
+		]
 	}
 }
