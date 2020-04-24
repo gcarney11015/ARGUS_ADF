@@ -17,6 +17,26 @@
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
+						"additionalColumns": [
+							{
+								"name": "importFileName",
+								"value": "$$FILEPATH"
+							},
+							{
+								"name": "ImportUniqueID",
+								"value": {
+									"value": "@pipeline().RunId",
+									"type": "Expression"
+								}
+							},
+							{
+								"name": "ImportDateTime",
+								"value": {
+									"value": "@utcnow()",
+									"type": "Expression"
+								}
+							}
+						],
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true
@@ -25,11 +45,95 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Profit_Center",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProfitCenter",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "detail_AccountLabel",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GLAccount",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GLPeriod",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GLPeriodKey",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "detail_AccountName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GLAccountDescription",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "detail_Annual",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AnnualBudgetAmount",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "detail Amount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MonthlyBudgetAmount",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ImportDateTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LoadDateTime",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "Budget_CSV",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "stage_BudgetImport",
 						"type": "DatasetReference"
 					}
 				]
