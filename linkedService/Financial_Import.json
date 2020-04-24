@@ -1,0 +1,17 @@
+{
+	"name": "Financial_Import",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ArgusKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "FinancialStorage"
+			}
+		}
+	}
+}
