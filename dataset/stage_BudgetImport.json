@@ -1,0 +1,83 @@
+{
+	"name": "stage_BudgetImport",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "groupHeader1_GroupColumn",
+				"type": "varchar"
+			},
+			{
+				"name": "groupFooter3_GroupColumn",
+				"type": "varchar"
+			},
+			{
+				"name": "groupFooter3_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "groupFooter2_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "groupFooter1_GroupColumn",
+				"type": "varchar"
+			},
+			{
+				"name": "groupFooter1_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "groupRevMinusReimb_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "groupRevMinusReimbDirect_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "groupOperatingExp_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "groupOperatingPL_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "groupPL_annualBudget",
+				"type": "varchar"
+			},
+			{
+				"name": "importFileName",
+				"type": "varchar"
+			},
+			{
+				"name": "importFileGUID",
+				"type": "varchar"
+			},
+			{
+				"name": "importDateTime",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "importRowID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "processed",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "stage",
+			"table": "BudgetImport2020"
+		}
+	}
+}
